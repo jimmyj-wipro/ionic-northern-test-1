@@ -14,3 +14,43 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.icon-large {font-size:2.4rem}
+h2  {font-size:2.1rem}
+h3  {font-size:1.9rem}
+ion-icon {
+  &[class*="arrow-up"] {
+    display: inline-block !important;
+      margin: 0 5px 0 0;
+      vertical-align: middle;
+      $sz: 20px;
+      width: $sz;
+      height: $sz;
+  } // custom icons
+  &[class*="pin"] {
+      background: url(../assets/imgs/custom-icons/pin.png) no-repeat 50% 50%;
+      background-size: contain;
+  }
+  &[class*="stars"] {
+      background: url(../assets/imgs/custom-icons/stars.png) no-repeat 50% 50%;
+      background-size: contain;
+  }
+}
+tab-title {
+  &[class*="arrow-up"] {
+      margin: 0 5px 0 0;
+      vertical-align: middle;
+      $sz: 20px;
+      width: $sz;
+      height: $sz;
+  } // custom icons
+  &[class*="pin"] {
+      background: url(../assets/imgs/custom-icons/pin.png) no-repeat 50% 50%;
+      background-size: contain;
+  }
+  &[class*="stars"] {
+      background: url(../assets/imgs/custom-icons/stars.png) no-repeat 50% 50%;
+      background-size: contain;
+  }
+}
+

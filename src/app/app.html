@@ -1,1 +1,21 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu persistent="true" side="right" [content]="mycontent">
+  <ion-content padding>
+      <button><ion-icon name="close" menuClose class="icon-large"></ion-icon></button>
+        <ion-list>
+            <button ion-item>
+              My power is off
+            </button>
+            <button ion-item>
+              Get connected
+            </button>
+            <button ion-item>
+              Our services
+            </button>
+            <button ion-item>
+              Contact us
+            </button>
+          </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav #mycontent [root]="rootPage"></ion-nav>
+

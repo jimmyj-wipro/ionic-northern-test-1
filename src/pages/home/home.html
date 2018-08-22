@@ -1,17 +1,28 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+      <ion-title><img src="../../assets/imgs/np-logo-colour.svg" width="145"></ion-title>
+      <button ion-button menuToggle right>
+          <ion-icon name="menu"></ion-icon>
+      </button>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content class="bg">
+  <div #map id="map"></div>
+
+  <div class="h2-bg-blur">
+    <h2>Report an outage</h2>
+    <section>
+      We understand how frustrating a power cut can be, that’s why we have made it as easy as possible to get some help.
+    </section>
+  </div>
+  <div class="h3-bg">
+  <h3>Please choose an option</h3>
+  <section>
+    We can check for you if there are any issues in your area, or you can report an outage yourself:
+    <br /><br />
+  </section>
+  <button ion-button block>Locate an outage near me</button>
+  <button ion-button color="secondary" block margin-top>I want to report an outage</button>
+  </div>
 </ion-content>
