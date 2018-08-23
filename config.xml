@@ -91,4 +91,5 @@
         <variable name="API_KEY_FOR_IOS" value="AIzaSyA1QADukrrfs2bZIW9oz54CehVjHH4DIzA" />
     </plugin>
     <engine name="android" spec="7.0.0" />
+    <plugin name="cordova-plugin-geolocation" spec="^4.0.1" />
 </widget>

@@ -1,55 +1,46 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { IonicPage } from 'ionic-angular';
 import { NavController } from 'ionic-angular';
-import { Platform } from 'ionic-angular';
+import { Geolocation } from '@ionic-native/geolocation';
 
 declare var google;
 
-@IonicPage()
 @Component({
-  selector: 'page-home',
+  selector: 'home-page',
   templateUrl: 'home.html'
 })
-
 export class HomePage {
 
   @ViewChild('map') mapElement: ElementRef;
   map: any;
-  start = 'london, gb';
-  end = 'london, gb';
-  directionsService = new google.maps.DirectionsService;
-  directionsDisplay = new google.maps.DirectionsRenderer;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public geolocation: Geolocation) {
 
   }
 
   ionViewDidLoad(){
-    this.initMap();
+    this.loadMap();
   }
 
-  initMap() {
-    this.map = new google.maps.Map(this.mapElement.nativeElement, {
+
+  loadMap(){
+
+  this.geolocation.getCurrentPosition().then((position) => {
+
+    let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+    let mapOptions = {
+      center: latLng,
       zoom: 8,
       disableDefaultUI: true,
-      center: {lat: 51.5074, lng: 0.1278}
-    });
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
 
-    this.directionsDisplay.setMap(this.map);
-  }
+    this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
 
-  calculateAndDisplayRoute() {
-    this.directionsService.route({
-      origin: this.start,
-      destination: this.end,
-      travelMode: 'DRIVING'
-    }, (response, status) => {
-      if (status === 'OK') {
-        this.directionsDisplay.setDirections(response);
-      } else {
-        window.alert('Directions request failed due to ' + status);
-      }
-    });
-  }
+  }, (err) => {
+    console.log(err);
+  });
+
+}
 
 }

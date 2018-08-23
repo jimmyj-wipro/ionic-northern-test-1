@@ -8,3 +8,4 @@ import { IonicPageModule } from 'ionic-angular';
   entryComponents: [HomePage]
 })
 export class HomePageModule { }
+
