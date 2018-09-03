@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 39">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #f46036;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        font-size: 11px;
+        font-family: FontAwesome5FreeRegular, "Font Awesome 5 Free";
+      }
+    </style>
+  </defs>
+  <g id="Group_40" data-name="Group 40" transform="translate(-25 -429.5)">
+    <path id="Path_7" data-name="Path 7" class="cls-1" d="M25.117,17.544,15.9,37.17a3.217,3.217,0,0,1-5.806,0L.82,17.544A11.164,11.164,0,0,1,0,13a13,13,0,0,1,26,0A11.218,11.218,0,0,1,25.117,17.544Z" transform="translate(25 429.5)"/>
+    <circle id="Ellipse_1" data-name="Ellipse 1" class="cls-2" cx="9.389" cy="9.389" r="9.389" transform="translate(28.611 433.111)"/>
+    <text id="_" data-name="" class="cls-3" transform="translate(37.944 446)"><tspan x="-4.802" y="0"></tspan></text>
+  </g>
+</svg>

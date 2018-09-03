@@ -24,7 +24,6 @@ $app-direction: ltr;
 
 
 
-
 // Named Color Variables
 // --------------------------------------------------
 // Named colors makes it easy to reuse colors on various components.
@@ -42,6 +41,7 @@ $colors: (
 );
 
 $toolbar-md-background: color($colors, light);
+$tabs-tab-color-inactive: color($colors, secondary);
 
 // App iOS Variables
 // --------------------------------------------------

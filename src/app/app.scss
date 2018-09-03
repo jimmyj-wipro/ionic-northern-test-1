@@ -15,7 +15,27 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-.icon-large {font-size:2.4rem}
+ion-modal {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.5);
+  ion-content.content{
+      background-color: rgba(255, 255, 255, 0.95);
+      top: 20%;
+      left: 10%;
+      width: 80%;
+      height: 60%;
+      border-radius: 8px;
+      .scroll-content {
+          border-radius: 8px;
+      }
+    }
+  }
+.ios .icon-large {
+  font-size: 3.6rem;
+  margin: -10px 0 0 0;
+}
+.icon-large {font-size:2.8rem}
 h2  {font-size:2.1rem}
 h3  {font-size:1.9rem}
 ion-icon {
@@ -54,3 +74,6 @@ tab-title {
   }
 }
 
+.bar-button-default-ios {
+  color: inherit;
+}

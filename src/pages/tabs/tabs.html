@@ -1,6 +1,7 @@
 <ion-tabs>
-  <ion-tab [root]="tab1Root" tabTitle="Map Key" tabIcon="arrow-up"></ion-tab>
-  <ion-tab [root]="tab2Root" tabIcon="call"></ion-tab>
-  <ion-tab [root]="tab3Root" tabIcon="link"></ion-tab>
-  <ion-tab [root]="tab3Root" tabIcon="logo-twitter"></ion-tab>
+  <ion-tab [root]="tab1Root" tabTitle="Map" tabIcon="map"></ion-tab>
+  <ion-tab (ionSelect)="presentModal()" tabTitle="Legend" tabIcon="list-box"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="call"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="Social" tabIcon="logo-twitter"></ion-tab>
 </ion-tabs>
+

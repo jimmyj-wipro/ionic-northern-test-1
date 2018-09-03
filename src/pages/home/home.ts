@@ -1,6 +1,8 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
+import { ModalController } from 'ionic-angular';
+import { ModalPage } from '../modal/modal';
 
 declare var google;
 
@@ -13,7 +15,7 @@ export class HomePage {
   @ViewChild('map') mapElement: ElementRef;
   map: any;
 
-  constructor(public navCtrl: NavController, public geolocation: Geolocation) {
+  constructor(public navCtrl: NavController, public geolocation: Geolocation, public modalCtrl: ModalController) {
 
   }
 
@@ -42,5 +44,8 @@ export class HomePage {
   });
 
 }
-
+  presentModal() {
+    const modal = this.modalCtrl.create(ModalPage);
+    modal.present();
+  }
 }
