@@ -1,7 +1,7 @@
 <ion-tabs>
   <ion-tab [root]="tab1Root" tabTitle="Map" tabIcon="map"></ion-tab>
   <ion-tab (ionSelect)="presentModal()" tabTitle="Legend" tabIcon="list-box"></ion-tab>
-  <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="call"></ion-tab>
+  <ion-tab (ionSelect)="showConfirm()" tabTitle="Contact" tabIcon="call"></ion-tab>
   <ion-tab [root]="tab3Root" tabTitle="Social" tabIcon="logo-twitter"></ion-tab>
 </ion-tabs>
 

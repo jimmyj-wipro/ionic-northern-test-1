@@ -52,7 +52,45 @@ export class MapLocatePage {
       fillOpacity: 0.35
     });
 
+    let triangleCoords2 = [
+      {lat: 51.5328, lng: -0.0670},
+      {lat: 51.541942, lng: -0.090746},
+      {lat: 51.547553, lng: -0.048875}
+    ];
+    let flightPath2 = new google.maps.Polygon({
+      path: triangleCoords2,
+      strokeColor: '#A2D729',
+      strokeOpacity: 1.0,
+      strokeWeight: 2,
+      fillColor: '#A2D729',
+      fillOpacity: 0.35
+    });
+
     flightPath.setMap(this.map);
+    flightPath2.setMap(this.map);
+
+
+    let marker = new google.maps.Marker({
+      map: this.map,
+      position: new google.maps.LatLng(51.5122, -0.0987),
+      animation: google.maps.Animation.DROP,
+      icon: {
+        anchor: new google.maps.Point(18, 56),
+        scaledSize: new google.maps.Size(36, 56),
+        url: '../assets/imgs/icon-unplanned-powercut.svg'
+      }
+    })
+
+    let marker2 = new google.maps.Marker({
+      map: this.map,
+      position: new google.maps.LatLng(51.538342, -0.0688746),
+      animation: google.maps.Animation.DROP,
+      icon: {
+        anchor: new google.maps.Point(18, 56),
+        scaledSize: new google.maps.Size(36, 56),
+        url: '../assets/imgs/icon-power-restored.svg'
+      }
+    })
 
   }, (err) => {
     console.log(err);
