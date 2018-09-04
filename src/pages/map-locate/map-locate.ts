@@ -70,7 +70,7 @@ export class MapLocatePage {
     flightPath2.setMap(this.map);
 
 
-    let marker = new google.maps.Marker({
+    new google.maps.Marker({
       map: this.map,
       position: new google.maps.LatLng(51.5122, -0.0987),
       animation: google.maps.Animation.DROP,
@@ -81,7 +81,7 @@ export class MapLocatePage {
       }
     })
 
-    let marker2 = new google.maps.Marker({
+    new google.maps.Marker({
       map: this.map,
       position: new google.maps.LatLng(51.538342, -0.0688746),
       animation: google.maps.Animation.DROP,
